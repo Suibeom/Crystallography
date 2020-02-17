@@ -171,7 +171,7 @@ function dynmplot(n)
     lims = [-1.5,1.5]
     anim = @animate for k in 1:314
         scatter3d([a[1] for a in pts], [a[2] for a in pts], [a[3] for a in pts], xlimits = lims, ylimits = lims,  zlimits = lims)
-        pts = [v(0.4) * pt for pt in pts]
+        pts = [v(0.04) * pt for pt in pts]
         println(k)
     end
     gif(anim, "/tmp/anim_llfps15.gif", fps = 15)
